@@ -10,7 +10,7 @@ Install RestedXP Guides (`RXPGuides`) for the same game client before using this
 
 1. Open WowUp and select your **WoW Forever** client.
 2. Open **Get Addons** → **Install from URL** and paste `https://github.com/andrewdens/RXPTargetPing`.
-3. Import and install the add-on. This requires a published GitHub release with the packaged ZIP described below. [WowUp's installation guide](https://wowup.io/guide/get-addons/overview)
+3. Click **Import**, then **Install**. [WowUp's installation guide](https://wowup.io/guide/get-addons/overview)
 4. Restart WoW if it was running. In the game's **AddOns** list, enable **RestedXP Guides** and **RestedXP Target Ping**.
 
 ### Manually
@@ -42,10 +42,3 @@ The add-on has no settings or slash commands of its own.
 - The add-on declares WoW interface version `16001` and requires a client that supports `/ping`.
 - It requires RestedXP's `ConfigureTargetButton` targeting function and only modifies buttons whose macros begin with `/cleartarget` followed by `/targetexact` for the button's target name.
 - Button configuration during combat lockdown is skipped. If RestedXP's targeting function is unavailable at load time, the add-on reports the compatibility issue in chat.
-
-## Publishing for WowUp
-
-1. Set `## Version` in `RXPTargetPing.toc` for the release and push the project to `https://github.com/andrewdens/RXPTargetPing.git`.
-2. Create a ZIP named `RXPTargetPing-forever.zip`. Put the `RXPTargetPing` folder at the root of the ZIP, with the TOC and Lua files directly inside that folder. WowUp uses the `-forever` suffix to identify the WoW Forever package when installing from a repository URL. [WowUp's installation guide](https://wowup.io/guide/get-addons/overview) · [WowUp Hub packaging guide](https://wowup.io/guide/wowup/hub)
-3. Create a GitHub release with a version tag matching the TOC version, such as `v1.0.0`. Attach `RXPTargetPing-forever.zip` as a release asset and publish the release. GitHub also generates source archives automatically. Upload the packaged ZIP separately so it has the required layout and filename.
-4. Verify the release by installing it in WowUp using the repository URL. For future updates, publish a new tagged release with an updated ZIP.
