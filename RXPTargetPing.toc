@@ -1,0 +1,7 @@
+## Interface: 16001
+## Title: RestedXP Target Ping
+## Notes: Pings the target selected by a RestedXP guide button.
+## Version: 1.0.0
+## Dependencies: RXPGuides
+
+RXPTargetPing.lua
